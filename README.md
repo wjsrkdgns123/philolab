@@ -1,6 +1,9 @@
 # philolab
 
-철학으로 나를 실험하다 — 철학 진단 시리즈 사이트의 첫 콘텐츠 **"당신을 이루는 두 철학자"** MVP입니다.
+> 철학으로 나를 실험하다 — 철학 진단 시리즈 사이트의 첫 콘텐츠 **"당신을 이루는 두 철학자"** MVP
+
+- **Live**: <https://philolab.pages.dev>
+- **Repo**: <https://github.com/wjsrkdgns123/philolab>
 
 ## 시작하기
 
@@ -31,12 +34,19 @@ npm run dev
 
 브라우저에서 [http://localhost:3000](http://localhost:3000) 으로 접속하면 사이트가 보입니다.
 
-### 4. 배포 (Vercel)
+### 4. 배포 (Cloudflare Pages)
 
-1. [vercel.com](https://vercel.com) 계정 만들기 (GitHub 계정으로 가입 가능)
-2. 이 폴더를 GitHub 리포지토리에 올리기
-3. Vercel에서 "Import Project" → GitHub 리포지토리 선택
-4. 자동 배포됨 (수 분 내)
+본 프로젝트는 **Cloudflare Pages**의 GitHub 연동으로 자동 배포됩니다 — `main` 브랜치에 push하면 자동 빌드·배포.
+
+빌드 설정 (Cloudflare 대시보드에서 한 번 입력):
+
+| 항목 | 값 |
+|---|---|
+| Framework preset | `Next.js (Static HTML Export)` |
+| Build command | `npm run build` |
+| Build output directory | `out` |
+
+라이브 URL: <https://philolab.pages.dev>
 
 ## 폴더 구조
 

@@ -41,15 +41,17 @@ for (const code of Object.keys(expected)) {
 }
 
 // --- ② HTTP probe ----------------------------------------------------------
+const BASE = process.argv[2] || "http://localhost:3000";
 const httpStatus = {};
 for (const code of Object.keys(expected)) {
   try {
-    const res = await fetch(`http://localhost:3000/two-philosophers/result?code=${code}`);
+    const res = await fetch(`${BASE}/two-philosophers/result?code=${code}`);
     httpStatus[code] = res.status;
   } catch (e) {
     httpStatus[code] = `ERR:${e.code || e.message}`;
   }
 }
+console.log(`Probing against: ${BASE}\n`);
 
 // --- 결과 ----------------------------------------------------------------
 let pass = 0, fail = 0;
