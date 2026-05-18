@@ -46,7 +46,7 @@ const diagnoses: DiagnosisCard[] = [
 
 export default function HomePage() {
   return (
-    <div className="relative isolate">
+    <div className="relative isolate overflow-clip">
       <PhilosopherBackdrop />
       <Header />
       <main className="container-content py-16 md:py-24 relative">
