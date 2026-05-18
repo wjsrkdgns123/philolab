@@ -24,16 +24,16 @@
 
 ## 기술 스택
 
-- **프레임워크**: Next.js 14 (App Router) — 정적 사이트로 빌드(`next export` 또는 정적 생성)
+- **프레임워크**: Next.js 14 (App Router) — 정적 export 모드 (`next.config.js`의 `output: "export"` → 빌드 결과 `out/`)
 - **스타일**: Tailwind CSS
 - **언어**: TypeScript
 - **폰트**:
   - 한글: Pretendard (CDN) 또는 Noto Serif KR
   - 본문은 산세리프(Pretendard), 결과 페이지 핵심 인용/철학자명은 세리프(Noto Serif KR)
-- **배포**: Vercel (무료 플랜)
+- **배포**: Cloudflare Pages (무료 플랜) — GitHub repo 자동 연동, build output directory: `out/`
 - **데이터 저장**: 없음. 결과는 URL 쿼리/해시에 인코딩.
 
-**왜 이 스택인가**: Next.js + Vercel은 vibe coding 친화적이고, 정적 배포라 비용 0. Tailwind는 별도 CSS 파일 없이 클래스로 디자인 완결.
+**왜 이 스택인가**: Next.js 14의 App Router를 *정적 export 모드*로 사용해 순수 HTML/CSS/JS로 빌드한 뒤, Cloudflare Pages의 글로벌 CDN에서 서빙. 비용 0, 무료 플랜 대역폭이 사실상 무제한, 한국 PoP 응답속도 우수. 향후 `philolab.kr` 도메인을 동일 콘솔에서 DNS·HTTPS·캐시까지 통합 관리 가능. Tailwind는 별도 CSS 파일 없이 클래스로 디자인 완결.
 
 ---
 
@@ -599,7 +599,7 @@ interface ResultContent {
 - [ ] 모바일 반응형 (320px ~ 768px 정상 작동)
 - [ ] 다크 모드 디자인 일관성
 - [ ] SEO 메타 태그
-- [ ] Vercel 배포 완료
+- [ ] Cloudflare Pages 배포 완료 (GitHub repo 자동 연동, build output `out/`)
 
 ---
 
