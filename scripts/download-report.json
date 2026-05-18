@@ -1,0 +1,172 @@
+[
+  {
+    "slug": "nietzsche",
+    "title": "Friedrich_Nietzsche",
+    "file": "nietzsche.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Nietzsche187a.jpg",
+    "filename": "Nietzsche187a.jpg",
+    "license": "Public domain",
+    "artist": "Friedrich Hermann Hartmann",
+    "verdict": "free"
+  },
+  {
+    "slug": "kant",
+    "title": "Immanuel_Kant",
+    "file": "kant.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/7/79/Immanuel_Kant_-_Gemaelde_1.jpg",
+    "filename": "Immanuel_Kant_-_Gemaelde_1.jpg",
+    "license": "Public domain",
+    "artist": "Johann Gottlieb Becker (1720-1782)",
+    "verdict": "free"
+  },
+  {
+    "slug": "zhuangzi",
+    "title": "Zhuang_Zhou",
+    "file": "zhuangzi.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/d/d4/%E7%8E%84%E9%96%80%E5%8D%81%E5%AD%90%E5%9C%96_%E8%8E%8A%E5%AD%90.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "filename": "玄門十子圖_莊子.jpg",
+    "license": "Public domain",
+    "artist": "Hua Zili (華祖立)",
+    "verdict": "free"
+  },
+  {
+    "slug": "hegel",
+    "title": "Georg_Wilhelm_Friedrich_Hegel",
+    "file": "hegel.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Jakob_Schlesinger_-_Hegel_1831.jpg",
+    "filename": "Jakob_Schlesinger_-_Hegel_1831.jpg",
+    "license": "Public domain",
+    "artist": "Jakob Schlesinger",
+    "verdict": "free"
+  },
+  {
+    "slug": "camus",
+    "title": "Albert_Camus",
+    "file": "camus.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/0/08/Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg",
+    "filename": "Albert_Camus,_gagnant_de_prix_Nobel,_portrait_en_buste,_posé_au_bureau,_faisant_face_à_gauche,_cigarette_de_tabagisme.jpg",
+    "license": "Public domain",
+    "artist": "Photograph by United Press International",
+    "verdict": "free"
+  },
+  {
+    "slug": "plato",
+    "title": "Plato",
+    "file": "plato.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/2/21/Plato_Silanion_Musei_Capitolini_MC1377.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "filename": "Plato_Silanion_Musei_Capitolini_MC1377.png",
+    "license": "Public domain",
+    "artist": "Marie-Lan Nguyen",
+    "verdict": "free"
+  },
+  {
+    "slug": "laozi",
+    "title": "Laozi",
+    "file": "laozi.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Laozi_%28Chinese_characters%29.svg/120px-Laozi_%28Chinese_characters%29.svg.png",
+    "filename": "120px-Laozi_(Chinese_characters).svg.png",
+    "license": "not-found",
+    "artist": "",
+    "verdict": "unknown"
+  },
+  {
+    "slug": "marx",
+    "title": "Karl_Marx",
+    "file": "marx.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored_%26_Adjusted_%283x4_cropped_b%29.png",
+    "filename": "Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored_&_Adjusted_(3x4_cropped_b).png",
+    "license": "Public domain",
+    "artist": "John Jabez Edwin Mayall",
+    "verdict": "free"
+  },
+  {
+    "slug": "spinoza",
+    "title": "Baruch_Spinoza",
+    "file": "spinoza.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Spinoza.jpg",
+    "filename": "Spinoza.jpg",
+    "license": "Public domain",
+    "artist": "anonymous",
+    "verdict": "free"
+  },
+  {
+    "slug": "sartre",
+    "title": "Jean-Paul_Sartre",
+    "file": "sartre.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Jean_Paul_Sartre_1965.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "filename": "Jean_Paul_Sartre_1965.jpg",
+    "license": "CC BY-SA 3.0 nl",
+    "artist": "Unknown authorUnknown author",
+    "verdict": "free"
+  },
+  {
+    "slug": "heraclitus",
+    "title": "Heraclitus",
+    "file": "heraclitus.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/2/24/Heraclitus_b_4_compressed.jpg",
+    "filename": "Heraclitus_b_4_compressed.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "RoyFokker",
+    "verdict": "free"
+  },
+  {
+    "slug": "epicurus",
+    "title": "Epicurus",
+    "file": "epicurus.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/8/88/Epikouros_BM_1843.jpg",
+    "filename": "Epikouros_BM_1843.jpg",
+    "license": "Public domain",
+    "artist": "Unknown artistUnknown artist",
+    "verdict": "free"
+  },
+  {
+    "slug": "aristotle",
+    "title": "Aristotle",
+    "file": "aristotle.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Aristotle_Altemps_Inv8575.jpg",
+    "filename": "Aristotle_Altemps_Inv8575.jpg",
+    "license": "Public domain",
+    "artist": "After Lysippos",
+    "verdict": "free"
+  },
+  {
+    "slug": "schopenhauer",
+    "title": "Arthur_Schopenhauer",
+    "file": "schopenhauer.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Arthur_Schopenhauer_by_J_Sch%C3%A4fer%2C_1859b.jpg",
+    "filename": "Arthur_Schopenhauer_by_J_Schäfer,_1859b.jpg",
+    "license": "Public domain",
+    "artist": "Johann Schäfer",
+    "verdict": "free"
+  },
+  {
+    "slug": "confucius",
+    "title": "Confucius",
+    "file": "confucius.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/5/54/Confucius_Tang_Dynasty.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "filename": "Confucius_Tang_Dynasty.jpg",
+    "license": "Public domain",
+    "artist": "Wu Daozi, 685-758, Tang Dynasty.",
+    "verdict": "free"
+  },
+  {
+    "slug": "seneca",
+    "title": "Seneca_the_Younger",
+    "file": "seneca.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/4/44/Duble_herma_of_Socrates_and_Seneca_Antikensammlung_Berlin_07.jpg",
+    "filename": "Duble_herma_of_Socrates_and_Seneca_Antikensammlung_Berlin_07.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Calidius",
+    "verdict": "free"
+  },
+  {
+    "slug": "deleuze",
+    "title": "Gilles_Deleuze",
+    "file": "deleuze.webp",
+    "source": "https://upload.wikimedia.org/wikipedia/en/7/7e/Gilles_Deleuze.webp",
+    "filename": "Gilles_Deleuze.webp",
+    "license": "not-found",
+    "artist": "",
+    "verdict": "unknown"
+  }
+]
