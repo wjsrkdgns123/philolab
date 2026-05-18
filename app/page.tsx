@@ -53,9 +53,7 @@ export default function HomePage() {
         {/* 히어로 */}
         <section className="mb-16 animate-fade-in-up md:mb-24">
           <h1 className="heading-serif mb-6 text-4xl leading-tight md:text-5xl">
-            철학으로 나를
-            <br />
-            실험하다
+            철학연구소
           </h1>
           <p className="max-w-md text-base leading-relaxed text-muted md:text-lg">
             MBTI와 사주가 닿지 못한 자리. philolab은 동서양 철학의 깊이로 당신을 비춥니다.
