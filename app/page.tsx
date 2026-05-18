@@ -46,8 +46,9 @@ const diagnoses: DiagnosisCard[] = [
 export default function HomePage() {
   return (
     <>
+      <PhilosopherBackdrop />
       <Header />
-      <main className="container-content py-16 md:py-24">
+      <main className="container-content py-16 md:py-24 relative">
         {/* 히어로 */}
         <section className="mb-16 animate-fade-in-up md:mb-24">
           <h1 className="heading-serif mb-6 text-4xl leading-tight md:text-5xl">
@@ -113,4 +114,51 @@ function DiagnosisCardItem({ title, description, href, active }: DiagnosisCard) 
   }
 
   return <div className="cursor-not-allowed">{content}</div>;
+}
+
+// 메인 페이지 viewport에 안개처럼 떠다니는 철학자 초상화.
+// 모두 free license. radial mask로 가장자리 자연스럽게 페이드.
+function PhilosopherBackdrop() {
+  const portraits = [
+    { src: "/philosophers/nietzsche.webp",    top: "8%",  left: "4%",  size: 180, opacity: 0.12 },
+    { src: "/philosophers/plato.webp",        top: "11%", left: "76%", size: 200, opacity: 0.10 },
+    { src: "/philosophers/zhuangzi.webp",     top: "33%", left: "14%", size: 140, opacity: 0.13, hideOnMobile: true },
+    { src: "/philosophers/kant.webp",         top: "38%", left: "82%", size: 160, opacity: 0.11 },
+    { src: "/philosophers/camus.webp",        top: "52%", left: "42%", size: 110, opacity: 0.08, hideOnMobile: true },
+    { src: "/philosophers/marx.webp",         top: "70%", left: "6%",  size: 130, opacity: 0.10 },
+    { src: "/philosophers/confucius.webp",    top: "72%", left: "70%", size: 150, opacity: 0.12 },
+    { src: "/philosophers/schopenhauer.webp", top: "55%", left: "88%", size: 90,  opacity: 0.09, hideOnMobile: true },
+    { src: "/philosophers/spinoza.webp",      top: "88%", left: "30%", size: 120, opacity: 0.10, hideOnMobile: true },
+  ];
+
+  return (
+    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      {portraits.map((p) => (
+        <div
+          key={p.src}
+          className={`absolute rounded-full ${p.hideOnMobile ? "hidden md:block" : ""}`}
+          style={{
+            top: p.top,
+            left: p.left,
+            width: `${p.size}px`,
+            height: `${p.size}px`,
+            opacity: p.opacity,
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={p.src}
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full rounded-full object-cover"
+            style={{
+              filter: "grayscale(100%) blur(1.5px)",
+              maskImage: "radial-gradient(circle at center, black 38%, transparent 72%)",
+              WebkitMaskImage: "radial-gradient(circle at center, black 38%, transparent 72%)",
+            }}
+          />
+        </div>
+      ))}
+    </div>
+  );
 }
