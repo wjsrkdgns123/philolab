@@ -45,7 +45,7 @@ const diagnoses: DiagnosisCard[] = [
 
 export default function HomePage() {
   return (
-    <>
+    <div className="relative isolate">
       <PhilosopherBackdrop />
       <Header />
       <main className="container-content py-16 md:py-24 relative">
@@ -69,7 +69,7 @@ export default function HomePage() {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
@@ -132,7 +132,7 @@ function PhilosopherBackdrop() {
   ];
 
   return (
-    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       {portraits.map((p) => (
         <div
           key={p.src}
