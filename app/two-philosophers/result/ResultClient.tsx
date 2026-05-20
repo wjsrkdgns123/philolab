@@ -2,11 +2,23 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Script from "next/script";
 import Link from "next/link";
 import { getResultByCode } from "@/lib/results";
 import { getPhilosopherVisual } from "@/lib/philosophers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+// 카카오 JS SDK 글로벌 타입 (최소 declare). 키 없을 땐 Script 미주입.
+declare global {
+  interface Window {
+    Kakao?: {
+      isInitialized: () => boolean;
+      init: (key: string) => void;
+      Share: { sendDefault: (config: Record<string, unknown>) => void };
+    };
+  }
+}
 
 export default function ResultClient() {
   const searchParams = useSearchParams();
@@ -14,12 +26,21 @@ export default function ResultClient() {
   const result = getResultByCode(code);
   const [copied, setCopied] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
+  const [kakaoReady, setKakaoReady] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       setShareUrl(window.location.href);
     }
   }, []);
+
+  // Script 컴포넌트의 onLoad에서 호출. 키가 없으면 Script 자체가 마운트되지 않음.
+  const initKakao = () => {
+    const key = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
+    if (!key || typeof window === "undefined" || !window.Kakao) return;
+    if (!window.Kakao.isInitialized()) window.Kakao.init(key);
+    setKakaoReady(true);
+  };
 
   // 코드 없거나 잘못된 경우 — 인트로로 안내
   if (!code || !result) {
@@ -51,8 +72,26 @@ export default function ResultClient() {
     result.shareText
   )}&url=${encodeURIComponent(shareUrl)}`;
 
+  const handleKakaoShare = () => {
+    if (!window.Kakao?.isInitialized()) return;
+    window.Kakao.Share.sendDefault({
+      objectType: "text",
+      text: `${result.shareText}\n\n${result.motto}`,
+      link: { mobileWebUrl: shareUrl, webUrl: shareUrl },
+    });
+  };
+
+  const kakaoEnvKey = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
+
   return (
     <>
+      {kakaoEnvKey && (
+        <Script
+          src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
+          strategy="lazyOnload"
+          onLoad={initKakao}
+        />
+      )}
       <Header />
       <main className="container-content py-12 md:py-16">
         {/* 상단 라벨 */}
@@ -143,6 +182,14 @@ export default function ResultClient() {
             결과를 친구와 나눠보세요
           </p>
           <div className="grid grid-cols-2 gap-3">
+            {kakaoReady && (
+              <button
+                onClick={handleKakaoShare}
+                className="btn-secondary col-span-2"
+              >
+                카카오톡으로 공유
+              </button>
+            )}
             <a
               href={twitterUrl}
               target="_blank"
